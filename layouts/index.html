@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <title>Welcome to Operator framework</title>
-</head>
-<body>
-  <header class="of-header-main">
-    <a href="#" class="of-brand"><img src="" alt=""></a>
-    <nav class="of-nav-main">
-      <ul class="of-link-list of-link-list--primary">
-        <li><a href="">Home!!!</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">What</a></li>
-        <li><a href="">Why</a></li>
-        <li><a href="">FAQ</a></li>
-        <li><a href="">Documentation</a></li>
-      </ul>
-    </nav>
-    <div class="of-header-main__search">
-      <input type="search">
-    </div>
-  </header>
+{{ partial "html-wrap.html" . }}
+{{ partial "header.html" . }}
   <section class="of-masthead of-masthead--home">
     <h1 class="of-heading of-heading--xl">Operator Framework</h1>
     <p>The Operator Framework is an open source toolkit to manage Kubernetes native applications, called Operators, in an effective, automated, and scalable way.</p>
@@ -69,36 +46,6 @@
     <h2 class="of-heading of-heading--lg">Contribute!</h2>
     <p>The Operator Framework and its components are open source, so please feel encouraged to jump into each individually and learn what else you can do. If you want to discuss your experience, have questions, or want to get involved, join the <a href="" class="of-link of-link--inline">Operator Framework mailing list</a> and visit us on <a href="" class="of-link of-link--inline">GitHub</a>.</p>
   </section>
-  <footer class="of-footer-main">
-    <div class="of-footer-main__meta">
-      <img src="" alt="">
-      <p class="of-footer-main__meta__text">The Operator Framework is an open source toolkit to manage Kubernetes native applications, called Operators, in an effective, automated, and scalable way.</p>
-      <ul class="of-link-list of-link-list--secondary">
-        <li><a href="">Operator SDK</a></li>
-        <li><a href="">Operator Lifecycle Manager</a></li>
-        <li><a class="of-link of-link--external" href="">OperatorHub</a></li>
-      </ul>
-    </div>
-    <div class="of-footer-main__social">
-      <h4 class="of-heading of-heading--md">Connect with us!</h4>
-      <ul class="of-link-list">
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Youtube</a></li>
-        <li><a href="#">Github</a></li>
-        <li><a href="#">Slack</a></li>
-      </ul>
-    </div>
-    <div class="of-footer-main__mailing-list">
-      <h4 class="of-heading of-heading--md">Join our mailing list</h4>
-      <input type="email">
-    </div>
-    <div class="of-footer-main__copyright">
-      <p>Copyright &copy; 2020</p>
-      <ul class="of-link-list">
-        <li><a href="">Privacy Statement</a></li>
-        <li><a href="">Terms of Use</a></li>
-      </ul>
-    </div>
-  </footer>
 </body>
 </html>
+{{ partial "footer.html" . }}
