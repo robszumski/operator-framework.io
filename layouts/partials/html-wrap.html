@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {{ $style := resources.Get "css/main.scss" }}
+  {{ $style = $style | toCSS |minify }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
   <title>Welcome to Operator framework</title>
 </head>
 <body>
