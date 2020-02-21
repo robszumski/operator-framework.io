@@ -1,0 +1,101 @@
+.of-header-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "brand search"
+    "nav nav";
+    
+    @media (min-width: $ov--breakpoint--lg) {
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    background: var(--of--color-black--300);
+    padding:  var(--of--spacer--xs) 0 0 0;
+    width: 100%;
+    .of-brand {
+        grid-area: brand;
+        display: flex;
+        margin: 0 var(--of--spacer--sm);
+        @media (min-width: $ov--breakpoint--lg) {
+            margin: 0 var(--of--spacer--lg);
+        } 
+    }
+    .of-header-main__search {
+        grid-area: search;
+        display: flex;
+        align-items: center;
+        margin: 0 var(--of--spacer--sm) 0 auto;
+        @media (min-width: $ov--breakpoint--lg) {
+            margin: 0 var(--of--spacer--lg) 0 auto;
+        }
+        &__input {
+            border-radius: var(--of--BorderRadius--sm);
+            border: none;
+            width: 100%;
+        }
+    }
+}
+
+.of-nav-main {
+    grid-area: nav;
+    .of-link-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content min-content;
+        margin-top: var(--of--spacer--xs);
+        @media (min-width: $ov--breakpoint--lg) {
+            display: flex; 
+            margin: 0;   
+        }
+        
+        &__li {
+            @media (min-width: $ov--breakpoint--lg) {
+                margin-right: var(--of--spacer--sm);
+                border: none;
+            }
+            border: 1px solid white;
+            &:nth-of-type(even),&:nth-of-type(odd) {
+                border-left: none;
+            }
+            &:nth-of-type(even) {
+                border-right: none;
+            }
+            &:not(:last-of-type):not(:nth-last-child(-n+2)){
+                border-bottom: none;
+            }
+                
+        }
+        &__a {
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            padding: var(--of--spacer--xs) 0;
+            @media (min-width: $ov--breakpoint--lg) {
+                width: auto;
+                padding: var(--of--spacer--sm) 0;
+                &:after {
+                    transition: all .25s linear;
+                    content:'';
+                    width: 100%;
+                    display: block;
+                    height: 0;
+                    background: white;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            
+        &:active, &:focus, &:hover {
+            &:after {
+                height: 6px;
+            }
+            text-decoration: none;
+        }
+        }
+    }
+}
+

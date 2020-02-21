@@ -1,0 +1,42 @@
+//type
+.ov-heading{
+    color: var(--of--Color--400);
+    font-weight: var(--of--FontWeight--100);
+}
+
+.ov-heading--xs, .ov-heading--sm {
+    font-size: var(--of--FontSize--xs);
+}
+.ov-heading--md {
+    font-size: var(--of--FontSize--sm);
+}
+.ov-heading--lg {
+    font-size: var(--of--FontSize--md);
+}
+.ov-heading--xl {
+    font-size: var(--of--FontSize--lg);
+}
+.ov-heading--2xl {
+    font-size: var(--of--FontSize--lg);
+}
+
+@media (min-width: $ov--breakpoint--lg) {
+    .ov-heading--xs {
+        font-size: var(--of--FontSize--xs);
+    }
+    .ov-heading--sm {
+        font-size: var(--of--FontSize--sm);
+    }
+    .ov-heading--md {
+        font-size: var(--of--FontSize--md);
+    }
+    .ov-heading--lg {
+        font-size: var(--of--FontSize--lg);
+    }
+    .ov-heading--xl {
+        font-size: var(--of--FontSize--xl);
+    }
+    .ov-heading--2xl {
+        font-size: var(--of--FontSize--2xl);
+    }
+}
