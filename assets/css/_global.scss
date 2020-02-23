@@ -1,3 +1,85 @@
-.of-link-list a {
+.of-link-list {
+    display: flex;
+    a {
     color: var(--of--color-white--100);
+    }
+}
+
+.of-button {
+    border-radius: var(--of--BorderRadius--lg);
+    padding: var(--of--spacer--xs) var(--of--spacer--sm);
+    display: inline-block;
+    border: var(--of--BorderWidth--sm) solid transparent;
+    &--primary {
+        background: var(--of--color-brand--200);
+        color: var(--of--color-white--100);
+        &:hover,&:active,&:focus {
+            color: var(--of--color-brand--200);
+            background: var(--of--color-white--100);  
+            border: var(--of--BorderWidth--sm) solid var(--of--color-brand--200);
+        }
+    }
+    &--secondary {
+        background: var(--of--color-white--100);
+        color: var(--of--color-brand--200);
+        &:hover,&:active,&:focus {
+            color: var(--of--color-white--100);
+            background: var(--of--color-brand--200); 
+            border: var(--of--BorderWidth--sm) solid var(--of--color-white--100); 
+        }
+    }
+
+    &--tertiary {
+        background: var(--of--color-blue--100);
+        color: var(--of--color-brand--200);
+        &:hover,&:active,&:focus {
+            color: var(--of--color-white--100);
+            background: var(--of--color-brand--200); 
+            border: var(--of--BorderWidth--sm) solid transparent; 
+        }
+    }
+    &:hover,&:active,&:focus {
+        text-decoration: none;
+    }
+}
+
+.of-masthead {
+    text-align: center;
+}
+
+.of-section {
+    padding: var(--of--spacer--sm);
+    @media (min-width: $ov--breakpoint--lg) {
+        padding: var(--of--spacer--lg);
+    }
+}
+
+.of-section__contribute {
+    background:linear-gradient(rgba(192, 221, 237, 0.95) 0%, rgba(192, 221, 237, 0.95) 100%), url("/images/header-bg.svg") left center;
+    background-size: 100% auto;
+    text-align: center;
+    .of-heading {
+        margin-bottom: var(--of--spacer--md);
+    }
+    &__content {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.of-section-whats-operator {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'content video';
+    &__content{
+        grid-area: content;
+        & * {
+            margin-bottom: var(--of--spacer--md);
+        }
+    }
+    &__video {
+        grid-area: video;
+    }
+
 }

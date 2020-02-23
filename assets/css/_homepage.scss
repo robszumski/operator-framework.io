@@ -1,0 +1,104 @@
+.of-masthead--home {   
+    background: linear-gradient(0deg, rgba(0,91,151,.9) 0%, rgba(0,117,190,.9) 40%, rgba(41,135,226,.9) 100%), url("/images/header-bg.svg") left center;
+    background-size: 100% auto;
+    padding: var(--of--spacer--lg) var(--of--spacer--md);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "title title"
+    "content content"
+    "action1 action2"
+    ;
+    .of-heading {
+        color: var(--of--color-white--100);
+    }
+    &__title {
+        grid-area: title;
+    }
+    &__content {
+        grid-area: content;
+        max-width: 55vw;
+        margin: var(--of--spacer--sm) auto var(--of--spacer--md);
+    }
+    &__action1 {
+        grid-area: action1;
+        justify-self: end;
+    }
+    &__action2 {
+        grid-area: action2;
+    }
+    .of-button {
+        margin: 0 var(--of--spacer--xs);
+        max-width: fit-content;
+    }
+}
+
+.of-section--homepage-callouts {
+    background: var(--of--color-blue--100);
+    display: flex;
+    flex-wrap: wrap;
+
+    &__header {
+        text-align: center;
+        max-width: 55vw;
+        margin: 0 auto var(--of--spacer--sm);
+        & > * {
+            margin-bottom: var(--of--spacer--sm);
+        }
+    }
+    &__items {
+        display: grid;
+        width: 80vw;
+        margin: 0 auto;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: var(--of--spacer--md);
+    }
+
+    &__item {
+        background: var(--of--color-white--100);
+        border-radius: var(--of--BorderRadius--md);
+        position: relative;
+        z-index: 1;
+        .shadow {
+            position: absolute;
+            background: white;
+            width: 100%;
+            height:40px;
+            border-radius: var(--of--BorderRadius--md);
+            bottom: 0;
+            left: 0;
+            &:after {
+            content:'';
+            position: absolute;
+            width: 70%;
+            height: 10px;            
+            box-shadow: 0 0 30px rgba(73, 140, 191, .75);
+            bottom: 0;
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%);
+            }
+        }
+        
+        &__img {
+            padding: var(--of--spacer--md);
+            background: var(--of--color-blue--200);
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            border-radius: var(--of--BorderRadius--md) var(--of--BorderRadius--md) 0 0;
+        }
+        &__content {
+            padding: var(--of--spacer--md);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            & > * {
+                margin-bottom: var(--of--spacer--sm);
+            }
+        }
+    }
+
+}

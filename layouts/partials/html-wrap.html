@@ -7,6 +7,7 @@
   {{ $style := resources.Get "css/main.scss" }}
   {{ $style = $style | toCSS |minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
+  <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
   <title>Welcome to Operator framework</title>
 </head>
 <body>

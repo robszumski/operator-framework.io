@@ -20,6 +20,9 @@
         margin: 0 var(--of--spacer--sm);
         @media (min-width: $ov--breakpoint--lg) {
             margin: 0 var(--of--spacer--lg);
+        }
+        img {
+            min-width: 185px;
         } 
     }
     .of-header-main__search {

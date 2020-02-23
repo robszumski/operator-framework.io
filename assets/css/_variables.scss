@@ -1,12 +1,12 @@
 :root {
   //type
-  --of--font-family: 'arial', sans-serif;
+  --of--font-family: 'overpass', sans-serif;
   --of--FontSize--xs:  .875rem; //14
   --of--FontSize--sm:  1rem; //16
   --of--FontSize--md:  1.125rem; //18
   --of--FontSize--lg:  1.375rem; //22
   --of--FontSize--xl:  1.5rem;//24
-  --of--FontSize--2xl: 2.625rem; //42
+  --of--FontSize--2xl: 2.625rem; //40
 
   //spacers
   --of--spacer--xs:  .5rem; //8  purple
@@ -17,14 +17,16 @@
   --of--spacer--2xl: 7rem; //112 blue
 
   //color
-  --of--color-brand--100: #0088CE;
-  --of--color-brand--200: #025081;
+  --of--color-brand--100: #0066cc;
+  --of--color-brand--200: #cc0000;
   --of--color-white--100: #FFF;
   --of--color-white--150: #FAFAFA;
   --of--color-white--200: #F6F6F6;
+  --of--color-blue--100:  #dfe7f4;
+  --of--color-blue--200:  #cad3e5;
   --of--color-grey--100:  #979797;
   --of--color-grey--200:  #666;
-  --of--color-black--100: #454545;
+  --of--color-black--100: #444;
   --of--color-black--200: #202020;
   --of--color-black--300: #000;
 
@@ -35,6 +37,7 @@
   --of--BorderWidth--sm: 2px;
   --of--BorderWidth--lg: 4px;
   --of--BorderRadius--sm: .625rem;
+  --of--BorderRadius--md: .75rem;
   --of--BorderRadius--lg: 40rem;
  
   //text
