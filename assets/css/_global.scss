@@ -54,11 +54,14 @@
 }
 
 .of-section__contribute {
-    background:linear-gradient(rgba(192, 221, 237, 0.95) 0%, rgba(192, 221, 237, 0.95) 100%), url("/images/header-bg.svg") left center;
-    background-size: 100% auto;
+    background:linear-gradient(rgba(203, 237, 255, 0.97) 0%, rgba(195, 231, 250, 0.97) 100%), url("/images/header-bg.svg") left center;
+    background-size: cover;
     text-align: center;
     .of-heading {
-        margin-bottom: var(--of--spacer--md);
+        margin-bottom: var(--of--spacer--sm);
+        @media (min-width: $ov--breakpoint--lg) {
+            margin-bottom: var(--of--spacer--md);  
+        }
     }
     &__content {
         width: 100%;

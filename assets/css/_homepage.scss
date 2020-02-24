@@ -2,6 +2,7 @@
     background: linear-gradient(0deg, rgba(0,91,151,.9) 0%, rgba(0,117,190,.9) 40%, rgba(41,135,226,.9) 100%), url("/images/header-bg.svg") left center;
     background-size: cover;
     padding: var(--of--spacer--lg) var(--of--spacer--md);
+    @media (min-width: $ov--breakpoint--lg) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -9,6 +10,7 @@
     "content content"
     "action1 action2"
     ;
+    }
     .of-heading {
         color: var(--of--color-white--100);
     }
@@ -17,7 +19,9 @@
     }
     &__content {
         grid-area: content;
-        max-width: 55vw;
+        @media (min-width: $ov--breakpoint--lg) {
+            max-width: 55vw;
+        }
         margin: var(--of--spacer--sm) auto var(--of--spacer--md);
     }
     &__action1 {
@@ -28,7 +32,7 @@
         grid-area: action2;
     }
     .of-button {
-        margin: 0 var(--of--spacer--xs);
+        margin: 0 var(--of--spacer--xs) var(--of--spacer--sm);
         max-width: fit-content;
         align-self: flex-start;
     }
@@ -51,7 +55,7 @@
         display: grid;
         margin: 0 auto;
         justify-content: center;
-        @media (min-width: $ov--breakpoint--lg) {
+        @media (min-width: $ov--breakpoint--md) {
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
         gap: var(--of--spacer--md);

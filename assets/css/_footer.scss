@@ -26,13 +26,17 @@
         & > *:not(:last-child){
             margin-bottom: var(--of--spacer--sm);
         }
-        .of-link-list__li {
-            &:not(:last-of-type) {
-                margin-right: var(--of--spacer--xs);
-                border-right: 1px solid var(--of--color-white--100);
-                padding-right: var(--of--spacer--xs);
+        @media (min-width: $ov--breakpoint--lg) {
+            .of-link-list__li {
+                &:not(:last-of-type) {
+                    margin-right: var(--of--spacer--xs);
+                    border-right: 1px solid var(--of--color-white--100);
+                    padding-right: var(--of--spacer--xs);
+                }             
             }
-            
+            .of-link-list__a {
+                text-decoration: underline;
+            }
         }
         
         img {
@@ -72,5 +76,6 @@
     }
     .of-link-list {
         display: flex;
+        flex-wrap: wrap;
     }
 }

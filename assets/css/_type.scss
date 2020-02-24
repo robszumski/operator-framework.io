@@ -14,10 +14,10 @@
     font-size: var(--of--FontSize--md);
 }
 .of-heading--xl {
-    font-size: var(--of--FontSize--xl);
+    font-size: var(--of--FontSize--md);
 }
 .of-heading--2xl {
-    font-size: var(--of--FontSize--2xl);
+    font-size: var(--of--FontSize--lg);
 }
 
 @media (min-width: $ov--breakpoint--lg) {
