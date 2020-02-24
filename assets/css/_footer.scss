@@ -44,7 +44,7 @@
         .of-link-list {
             flex-direction: column;
             &__li {
-                margin: var(--of--spacer--xs) 0;
+                margin-bottom: var(--of--spacer--sm);
             }
             &__a {
                 display: flex;

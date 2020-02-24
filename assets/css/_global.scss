@@ -8,8 +8,9 @@
 .of-button {
     border-radius: var(--of--BorderRadius--lg);
     padding: var(--of--spacer--xs) var(--of--spacer--sm);
-    display: inline-block;
+    display: inline-flex;
     border: var(--of--BorderWidth--sm) solid transparent;
+    text-align: center;
     &--primary {
         background: var(--of--color-brand--200);
         color: var(--of--color-white--100);
@@ -69,9 +70,12 @@
 }
 
 .of-section-whats-operator {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'content video';
+    @media (min-width: $ov--breakpoint--lg) {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'content video';
+        grid-gap: var(--of--spacer--sm);
+    }
     &__content{
         grid-area: content;
         & * {

@@ -1,6 +1,6 @@
 .of-masthead--home {   
     background: linear-gradient(0deg, rgba(0,91,151,.9) 0%, rgba(0,117,190,.9) 40%, rgba(41,135,226,.9) 100%), url("/images/header-bg.svg") left center;
-    background-size: 100% auto;
+    background-size: cover;
     padding: var(--of--spacer--lg) var(--of--spacer--md);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -30,6 +30,7 @@
     .of-button {
         margin: 0 var(--of--spacer--xs);
         max-width: fit-content;
+        align-self: flex-start;
     }
 }
 
