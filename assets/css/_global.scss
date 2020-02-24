@@ -17,7 +17,6 @@
         &:hover,&:active,&:focus {
             color: var(--of--color-brand--200);
             background: var(--of--color-white--100);  
-            border: var(--of--BorderWidth--sm) solid var(--of--color-brand--200);
         }
     }
     &--secondary {
@@ -26,17 +25,16 @@
         &:hover,&:active,&:focus {
             color: var(--of--color-white--100);
             background: var(--of--color-brand--200); 
-            border: var(--of--BorderWidth--sm) solid var(--of--color-white--100); 
         }
     }
 
     &--tertiary {
-        background: var(--of--color-blue--100);
-        color: var(--of--color-brand--200);
+        background: var(--of--color-brand--200);
+        color: var(--of--color-white--100);
         &:hover,&:active,&:focus {
-            color: var(--of--color-white--100);
-            background: var(--of--color-brand--200); 
-            border: var(--of--BorderWidth--sm) solid transparent; 
+            color: var(--of--color-brand--200);
+            background: var(--of--color-white--100);  
+            border: var(--of--BorderWidth--sm) solid var(--of--color-brand--200);
         }
     }
     &:hover,&:active,&:focus {
