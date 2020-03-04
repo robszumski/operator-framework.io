@@ -1,5 +1,5 @@
 .of-footer-main {
-    background: var(--of--color-brand--100);
+    background: var(--of--color-brand--300);
     color: var(--of--color-white--100);
     @media (min-width: $ov--breakpoint--lg) {
         display: grid;
@@ -9,24 +9,26 @@
         "meta social newsletter"
         "copy copy copy"
         ;
-        & >*:not(:last-child) {
-            padding: var(--of--spacer--lg);
-        }
+        // & >*:not(:last-child) {
+        //     padding: var(--of--spacer--lg);
+        // }
     }
-    padding-top: var(--of--spacer--sm);
+    padding-top: var(--of--spacer--2xl);
     
-    & >*:not(:last-child) {
-        padding: var(--of--spacer--sm);
-    }
+    // & >*:not(:last-child) {
+    //     padding: var(--of--spacer--sm);
+    // }
     .of-heading {
         margin-bottom: var(--of--spacer--sm);
     }
     &__meta {
         grid-area: meta;
+        padding: 0 var(--of--spacer--lg) var(--of--spacer--lg) var(--of--spacer--lg);
         & > *:not(:last-child){
             margin-bottom: var(--of--spacer--sm);
         }
         @media (min-width: $ov--breakpoint--lg) {
+            padding: 0 var(--of--spacer--2xl) var(--of--spacer--2xl) var(--of--spacer--2xl);
             .of-link-list__li {
                 &:not(:last-of-type) {
                     margin-right: var(--of--spacer--xs);
@@ -38,31 +40,26 @@
                 text-decoration: underline;
             }
         }
-        
         img {
             max-width: 200px;
         }
     }
     &__social {
         grid-area: social;
+        padding:var(--of--spacer--lg);
         .of-link-list {
-            flex-direction: column;
             &__li {
-                margin-bottom: var(--of--spacer--sm);
+                margin-right: var(--of--spacer--md);
+                display: flex;
             }
             &__a {
                 display: flex;
                 align-items: center;
             }
-            svg {
-                margin-right: var(--of--spacer--xs);
-                max-width: 20px;
-                max-height: 20px;
-            }
         }
-    }
-    &__newsletter {
-        grid-area: newsletter;
+        input {
+            margin-bottom: var(--of--spacer--lg);
+        }
     }
     &__copyright {
         grid-area: copy;

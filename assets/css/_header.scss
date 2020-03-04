@@ -6,20 +6,19 @@
     "nav nav";
     
     @media (min-width: $ov--breakpoint--lg) {
-        padding: 0;
         display: flex;
         align-items: center;
     }
 
     background: var(--of--color-black--300);
-    padding:  var(--of--spacer--xs) 0 0 0;
+    // padding:  var(--of--spacer--xs) 0 0 0;
     width: 100%;
     .of-brand {
         grid-area: brand;
         display: flex;
         margin: 0 var(--of--spacer--sm);
         @media (min-width: $ov--breakpoint--lg) {
-            margin: 0 var(--of--spacer--lg);
+            margin: 0 var(--of--spacer--xl);
         }
         img {
             min-width: 185px;
@@ -47,7 +46,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min-content min-content;
-        margin-top: var(--of--spacer--xs);
         @media (min-width: $ov--breakpoint--lg) {
             display: flex; 
             margin: 0;   
@@ -55,7 +53,7 @@
         
         &__li {
             @media (min-width: $ov--breakpoint--lg) {
-                margin-right: var(--of--spacer--sm);
+                // margin-right: var(--of--spacer--md);
                 border: none;
             }
             border: 1px solid white;
@@ -78,25 +76,12 @@
             padding: var(--of--spacer--xs) 0;
             @media (min-width: $ov--breakpoint--lg) {
                 width: auto;
-                padding: var(--of--spacer--sm) 0;
-                &:after {
-                    transition: all .25s linear;
-                    content:'';
-                    width: 100%;
-                    display: block;
-                    height: 0;
-                    background: white;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                }
+                padding: var(--of--spacer--lg) var(--of--spacer--md) ;
             }
             
         &:active, &:focus, &:hover {
-            &:after {
-                height: 6px;
-            }
             text-decoration: none;
+            background: var(--of--color-brand--100);
         }
         }
     }

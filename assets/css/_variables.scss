@@ -9,19 +9,21 @@
   --of--FontSize--2xl: 2.625rem; //40
 
   //spacers
-  --of--spacer--xs:  .5rem; //8  purple
-  --of--spacer--sm:  1rem; //16  light blue
-  --of--spacer--md:  2rem; //32  green
-  --of--spacer--lg:  2.75rem; //64  yellow
-  --of--spacer--xl:  5rem; //80  pink
-  --of--spacer--2xl: 7rem; //112 blue
+  --of--spacer--xs:  .25rem; //4  purple
+  --of--spacer--sm:  .5rem; //8  light blue
+  --of--spacer--md:  1rem; //16  green
+  --of--spacer--lg:  1.5rem; //24  yellow
+  --of--spacer--xl:  2rem; //32  pink
+  --of--spacer--2xl: 3rem; //48 blue
+  --of--spacer--3xl:  4rem; //64  purple
 
   //color
-  --of--color-brand--100: #0066cc;
-  --of--color-brand--200: #cc0000;
+  --of--color-brand--100: #007299;
+  --of--color-brand--200: #005D86;
+  --of--color-brand--300: #002032;
   --of--color-white--100: #FFF;
-  --of--color-white--150: #FAFAFA;
-  --of--color-white--200: #F6F6F6;
+  --of--color-white--150: #F0F0F0;
+  --of--color-white--200: #EDEDED;
   --of--color-blue--100:  #dfe7f4;
   --of--color-blue--200:  #cad3e5;
   --of--color-grey--100:  #979797;
@@ -36,7 +38,7 @@
   //borders
   --of--BorderWidth--sm: 2px;
   --of--BorderWidth--lg: 4px;
-  --of--BorderRadius--sm: .625rem;
+  --of--BorderRadius--sm: .1875rem;
   --of--BorderRadius--md: .75rem;
   --of--BorderRadius--lg: 40rem;
  
