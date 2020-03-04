@@ -33,7 +33,7 @@
             margin: 0 var(--of--spacer--lg) 0 auto;
         }
         &__input {
-            border-radius: var(--of--BorderRadius--sm);
+            border-radius: var(--of--BorderRadius--lg);
             border: none;
             width: 100%;
         }
@@ -56,7 +56,7 @@
                 // margin-right: var(--of--spacer--md);
                 border: none;
             }
-            border: 1px solid white;
+            border: 1px solid var(--of--color-black--200);
             &:nth-of-type(even),&:nth-of-type(odd) {
                 border-left: none;
             }
