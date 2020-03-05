@@ -1,10 +1,11 @@
 .of-masthead--home {   
-    background:#040404 url("/images/bg-masthead.svg") -35vw -46vw no-repeat;
+    background: var(--of--color-black--100) url("/images/bg-masthead.svg") no-repeat;
+    background-position: -35vw -46vw ;
     background-size: 100% auto;
     padding: calc(2 * var(--of--spacer--2xl)) var(--of--spacer--md) var(--of--spacer--xl);
     @media (min-width: $ov--breakpoint--sm) {
-    background:#040404 url("/images/bg-masthead.svg") 0 50% no-repeat;
-    background-size: 180% auto;
+    background-position:-140% 50.5%;
+    background-size: 115% auto;
     }
     @media (min-width: $ov--breakpoint--lg) {
         padding: var(--of--spacer--2xl) calc(var(--of--spacer--3xl) + var(--of--spacer--md))  var(--of--spacer--2xl);
@@ -13,7 +14,6 @@
         color: var(--of--color-white--100);
     }
     &__title {
-        grid-area: title;
         display: flex;
         flex-direction: column;
         text-transform: uppercase;
@@ -29,20 +29,16 @@
         }
     }
     &__content {
-        grid-area: content;
         @media (min-width: $ov--breakpoint--sm) {
             max-width: 55vw;
             margin: var(--of--spacer--xl) 0;
         }
         margin: var(--of--spacer--md) 0;
     }
-    .of-button {
-        margin: 0 var(--of--spacer--xs) var(--of--spacer--sm);
-    }
+    
 }
 
 .of-section--homepage-callouts {
-    
     display: flex;
     flex-wrap: wrap;
     border-bottom: 2px solid var(--of--color-white--150);
@@ -56,7 +52,9 @@
         width: 100%;
         & > * {
             margin-bottom: var(--of--spacer--sm);
-            max-width: 55vw;
+            @media (min-width: $ov--breakpoint--lg) {
+                max-width: 55vw;
+            }
         }
         .of-heading {
             color: var(--of--color-brand--200);
