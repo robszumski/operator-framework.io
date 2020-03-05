@@ -1,6 +1,7 @@
 .of-footer-main {
     background: var(--of--color-brand--300);
     color: var(--of--color-white--100);
+    position: relative;
     @media (min-width: $ov--breakpoint--lg) {
         display: grid;
         grid-template-columns: 3fr 2fr 2fr;
@@ -10,6 +11,15 @@
         "copy copy copy"
         ;
 
+    }
+    &:before {
+        content:'';
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right, var(--of--color-brand--50) 25%, var(--of--color-brand--100) 25%, var(--of--color-brand--100) 50%, var(--of--color-brand--100) 50%, var(--of--color-brand--200) 50%, var(--of--color-brand--200) 75%, var(--of--color-brand--300) 75%);
     }
     padding-top: var(--of--spacer--2xl);
     .of-heading {
@@ -70,7 +80,7 @@
         grid-area: copy;
         display: flex;
         color: var(--of--color-white--100);
-        padding: var(--of--spacer--sm) var(--of--spacer--lg);
+        padding: var(--of--spacer--xl);
         background: var(--of--color-black--300);
         .of-link-list__li {
             margin-left: var(--of--spacer--sm);
