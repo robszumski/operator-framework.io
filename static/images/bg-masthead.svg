@@ -1,1 +1,147 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 281 281"><defs><style>.a,.b{fill:none;}.b{clip-rule:evenodd;}.c{clip-path:url(#a);}.d{clip-path:url(#b);}.e{fill:#002032;}.f{clip-path:url(#c);}.g{fill:#00456a;}.h{clip-path:url(#e);}.i{fill:#005d86;}.j{clip-path:url(#g);}.k{fill:#007299;}.l{clip-path:url(#i);}.m{fill:#0095b7;}.n{clip-path:url(#k);}.o{fill:#fff;}.p{clip-path:url(#m);}</style><clipPath id="a" transform="translate(5 5)"><circle class="a" cx="135.5" cy="135.5" r="135.5"/></clipPath><clipPath id="b" transform="translate(5 5)"><rect class="a" x="-42" y="-139" width="360" height="3411"/></clipPath><clipPath id="c" transform="translate(5 5)"><circle class="a" cx="135" cy="136" r="119"/></clipPath><clipPath id="e" transform="translate(5 5)"><circle class="a" cx="135" cy="136" r="102"/></clipPath><clipPath id="g" transform="translate(5 5)"><circle class="a" cx="135.5" cy="135.5" r="85.5"/></clipPath><clipPath id="i" transform="translate(5 5)"><circle class="a" cx="135.5" cy="135.5" r="68.5"/></clipPath><clipPath id="k" transform="translate(5 5)"><circle class="a" cx="135.5" cy="136.5" r="34.5"/></clipPath><clipPath id="m" transform="translate(5 5)"><polygon class="b" points="155 132.1 133.7 132.1 142.6 108.2 115.9 141.9 136.2 141.8 130.3 164.7 155 132.1"/></clipPath></defs><title>bg-masthead</title><g class="c"><g class="d"><rect class="e" width="281" height="281"/></g></g><g class="f"><g class="d"><rect class="g" x="16" y="17" width="248" height="248"/></g></g><g class="h"><g class="d"><rect class="i" x="33" y="34" width="214" height="214"/></g></g><g class="j"><g class="d"><rect class="k" x="50" y="50" width="181" height="181"/></g></g><g class="l"><g class="d"><rect class="m" x="67" y="67" width="147" height="147"/></g></g><g class="n"><g class="d"><rect class="o" x="101" y="102" width="79" height="79"/></g></g><g class="p"><g class="d"><rect class="m" x="115.9" y="108.2" width="49.2" height="66.48"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 264.9 264.9" style="enable-background:new 0 0 264.9 264.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{clip-path:url(#SVGID_4_);fill:#002032;}
+	.st2{clip-path:url(#SVGID_6_);}
+	.st3{clip-path:url(#SVGID_8_);fill:#00456A;}
+	.st4{fill:none;stroke:#002336;stroke-width:0.3332;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#002032;stroke-width:0.3332;stroke-miterlimit:10;}
+	.st6{clip-path:url(#SVGID_10_);}
+	.st7{clip-path:url(#SVGID_12_);fill:#005D86;}
+	.st8{clip-path:url(#SVGID_14_);}
+	.st9{clip-path:url(#SVGID_16_);fill:#007299;}
+	.st10{clip-path:url(#SVGID_18_);}
+	.st11{clip-path:url(#SVGID_20_);fill:#0095B7;}
+	.st12{clip-path:url(#SVGID_22_);}
+	.st13{clip-path:url(#SVGID_24_);fill:#FFFFFF;}
+	.st14{clip-path:url(#SVGID_26_);}
+	.st15{clip-path:url(#SVGID_28_);fill:#0095B7;}
+</style>
+<title>bg-masthead</title>
+<g>
+	<defs>
+		<circle id="SVGID_1_" cx="132.5" cy="132.5" r="106"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<defs>
+			<rect id="SVGID_3_" x="-198.1" y="-4.5" width="455.2" height="689.5"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="24.8" y="24.8" class="st1" width="215.3" height="215.3"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<circle id="SVGID_5_" cx="132.5" cy="132.5" r="93"/>
+	</defs>
+	<clipPath id="SVGID_6_">
+		<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st2">
+		<defs>
+			<rect id="SVGID_7_" x="-198.1" y="-4.5" width="455.2" height="689.5"/>
+		</defs>
+		<clipPath id="SVGID_8_">
+			<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="37.8" y="37.8" class="st3" width="189.4" height="189.4"/>
+	</g>
+</g>
+<circle class="st4" cx="132.5" cy="132.5" r="93"/>
+<circle class="st5" cx="132.5" cy="132.5" r="119.1"/>
+<circle class="st5" cx="132.5" cy="132.5" r="132.3"/>
+<g>
+	<defs>
+		<circle id="SVGID_9_" cx="132.5" cy="132.5" r="80"/>
+	</defs>
+	<clipPath id="SVGID_10_">
+		<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st6">
+		<defs>
+			<rect id="SVGID_11_" x="-198.1" y="-4.5" width="455.2" height="689.5"/>
+		</defs>
+		<clipPath id="SVGID_12_">
+			<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="50.8" y="50.8" class="st7" width="163.2" height="163.2"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<circle id="SVGID_13_" cx="132.5" cy="132.5" r="66.9"/>
+	</defs>
+	<clipPath id="SVGID_14_">
+		<use xlink:href="#SVGID_13_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st8">
+		<defs>
+			<rect id="SVGID_15_" x="-198.1" y="-4.5" width="455.2" height="689.5"/>
+		</defs>
+		<clipPath id="SVGID_16_">
+			<use xlink:href="#SVGID_15_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="63.9" y="63.9" class="st9" width="137.1" height="137.1"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<circle id="SVGID_17_" cx="132.5" cy="132.5" r="53.8"/>
+	</defs>
+	<clipPath id="SVGID_18_">
+		<use xlink:href="#SVGID_17_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st10">
+		<defs>
+			<rect id="SVGID_19_" x="-198.1" y="-4.5" width="455.2" height="689.5"/>
+		</defs>
+		<clipPath id="SVGID_20_">
+			<use xlink:href="#SVGID_19_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="77" y="77" class="st11" width="110.9" height="110.9"/>
+	</g>
+</g>
+<g>
+	<defs>
+		
+			<ellipse id="SVGID_21_" transform="matrix(0.9871 -0.1602 0.1602 0.9871 -19.5788 22.651)" cx="130.7" cy="132.8" rx="39.1" ry="39.1"/>
+	</defs>
+	<clipPath id="SVGID_22_">
+		<use xlink:href="#SVGID_21_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st12">
+		<defs>
+			<rect id="SVGID_23_" x="-198.1" y="-4.5" width="455.2" height="689.5"/>
+		</defs>
+		<clipPath id="SVGID_24_">
+			<use xlink:href="#SVGID_23_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="90" y="92" class="st13" width="81.5" height="81.5"/>
+	</g>
+</g>
+<g>
+	<defs>
+		<polygon id="SVGID_25_" points="153.8,127.7 129.7,127.7 139.7,100.7 109.4,138.8 132.5,138.7 125.8,164.7 		"/>
+	</defs>
+	<clipPath id="SVGID_26_">
+		<use xlink:href="#SVGID_25_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st14">
+		<defs>
+			<rect id="SVGID_27_" x="-198.1" y="-4.5" width="455.2" height="689.5"/>
+		</defs>
+		<clipPath id="SVGID_28_">
+			<use xlink:href="#SVGID_27_"  style="overflow:visible;"/>
+		</clipPath>
+		<rect x="107.8" y="99.1" class="st15" width="47.7" height="67.3"/>
+	</g>
+</g>
+</svg>

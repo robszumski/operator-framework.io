@@ -1,11 +1,11 @@
 .of-masthead--home {   
     background: var(--of--color-black--100) url("/images/bg-masthead.svg") no-repeat;
-    background-position: -35vw -46vw ;
-    background-size: 100% auto;
+    background-position: -22vw -30vw ;
+    background-size: 70% auto;
     padding: calc(2 * var(--of--spacer--2xl)) var(--of--spacer--md) var(--of--spacer--xl);
     @media (min-width: $ov--breakpoint--sm) {
-    background-position:-140% 50.5%;
-    background-size: 115% auto;
+    background-position:35vw 50.5%;
+    background-size: 100% auto;
     }
     @media (min-width: $ov--breakpoint--lg) {
         padding: var(--of--spacer--2xl) calc(var(--of--spacer--3xl) + var(--of--spacer--md))  var(--of--spacer--2xl);
