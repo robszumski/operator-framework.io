@@ -5,6 +5,12 @@
     }
 }
 
+.of-link {
+    &--inline {
+        white-space: nowrap;
+    }    
+}
+
 .of-button {
     border-radius: var(--of--BorderRadius--sm);
     padding: var(--of--spacer--sm) var(--of--spacer--lg);
