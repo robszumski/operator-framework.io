@@ -35,7 +35,14 @@
         }
         margin: var(--of--spacer--md) 0;
     }
-    
+    .of-button {
+        &:first-of-type {
+            margin-bottom: var(--of--spacer--md);
+            @media (min-width: $ov--breakpoint--lg) {
+                margin: 0 var(--of--spacer--lg) 0 0;
+            }
+        }
+    }
 }
 
 .of-section--homepage-callouts {
