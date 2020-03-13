@@ -22,7 +22,6 @@
     &__title {
         display: flex;
         flex-direction: column;
-        text-transform: uppercase;
         line-height: 2rem;
         margin-bottom: var(--of--spacer--md);
         span {
@@ -40,6 +39,7 @@
             margin: var(--of--spacer--xl) 0;
         }
         margin: var(--of--spacer--md) 0;
+        text-transform: none;
     }
     .of-button {
         &:first-of-type {
