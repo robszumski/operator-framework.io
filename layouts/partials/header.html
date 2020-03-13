@@ -4,15 +4,11 @@
         </a>
     <nav class="of-nav-main">
       <ul class="of-link-list of-link-list--primary">
-        {{ range .Site.Menus.main }}
-        <li class="of-link-list__li"><a class="of-link-list__a" href="{{ .URL }}">{{ .Name }}</a></li>
-        {{ end }}
-        <!-- <li class="of-link-list__li"><a class="of-link-list__a" href="about.html">About</a></li>
-        <li class="of-link-list__li"><a class="of-link-list__a" href="">What</a></li>
-        <li class="of-link-list__li"><a class="of-link-list__a" href="">Why</a></li>
-        <li class="of-link-list__li"><a class="of-link-list__a" href="">FAQ</a></li>
-        <li class="of-link-list__li"><a class="of-link-list__a" href="">Documentation</a></li> -->
-      </ul>
+        {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <li class="of-link-list__li"><a class="of-link-list__a{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} of-m-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+    {{ end }}
+    </ul>
     </nav>
     <div class="of-header-main__search">
       <input class="of-header-main__search__input" type="search">

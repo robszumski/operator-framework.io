@@ -73,6 +73,7 @@
             display: inline-block;
             position: relative;
             padding: var(--of--spacer--xs) 0;
+            transition: background .25s linear;
             @media (min-width: $ov--breakpoint--lg) {
                 width: auto;
                 padding: var(--of--spacer--lg) var(--of--spacer--md) ;

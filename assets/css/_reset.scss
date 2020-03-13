@@ -104,9 +104,9 @@
       text-decoration: underline;
     }
   }
-  a, a:before, a:after, button, button:before, button:after {
-      transition: var(--of--animation);
-  }
+  // a, a:before, a:after, button, button:before, button:after {
+  //     transition: var(--of--animation);
+  // }
     button,
     a {
       cursor: pointer;
