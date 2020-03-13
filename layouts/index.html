@@ -1,20 +1,21 @@
-{{ partial "html-wrap.html" . }}
-{{ partial "header.html" . }}
-  <section class="of-masthead of-masthead--home">
-    <h1 class="of-heading of-masthead--home__title"><span>Operator</span><span>Framework</span></h1>
-    <h2 class="of-heading of-heading--md of-masthead--home__content">The Operator Framework is an open source toolkit to manage Kubernetes native applications, called Operators, in an effective, automated, and scalable way.</h2>
-    <a href="" class="of-button of-button--primary of-masthead--home__action1">What is an Operator?</a>
-    <a href="" class="of-button of-button--secondary of-masthead--home__action2" aria-label="how can I build an operator">How can I build one?</a>
-  </section>
-  <section class="of-section--homepage-callouts">
-    <header class="of-section--homepage-callouts__header">
+{{ define "masthead" }}
+<section class="of-masthead of-masthead--home">
+  <h1 class="of-heading of-masthead--home__title"><span>Operator</span><span>Framework</span></h1>
+  <h2 class="of-heading of-heading--md of-masthead--home__content">The Operator Framework is an open source toolkit to manage Kubernetes native applications, called Operators, in an effective, automated, and scalable way.</h2>
+  <a href="" class="of-button of-button--primary of-masthead--home__action1">What is an Operator?</a>
+  <a href="" class="of-button of-button--secondary of-masthead--home__action2" aria-label="how can I build an operator">How can I build one?</a>
+</section>
+{{ end }}
+{{ define "main" }}
+  <section class="of-section-page-intro of-section-separator">
+    <header class="of-section-page-intro__header of-section-page-intro__header--overlay">
       <h2 class="of-heading of-heading--lg">What's in the Framework?</h2>
     <p>Brief sentence about the contents of the framework to introduce the below websites. For example, the Operator Framework is a holistic framework for your operator needs, etc.</p>
     </header>
-    <div class="of-section--homepage-callouts__items">
-      <div class="of-section--homepage-callouts__item of-section--homepage-callouts__item__build">
+    <div class="of-section-page-intro__items">
+      <div class="of-section-page-intro__item of-section-page-intro__item__build">
           <h3 class="of-heading of-heading--lg">Build</h3>
-          <div class="of-section--homepage-callouts__item__content">
+          <div class="of-section-page-intro__item__content">
           <p>Software development kit for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding. <a href="#" class="of-link of-link__inline">Learn more</a></p>
         <a href="#" class="of-button of-button--tertiary">
           Build an Operator
@@ -25,9 +26,9 @@
         </a>  
         </div>
       </div>
-      <div class="of-section--homepage-callouts__item of-section--homepage-callouts__item__manage">
+      <div class="of-section-page-intro__item of-section-page-intro__item__manage">
           <h3 class="of-heading of-heading--lg">Manage</h3>
-          <div class="of-section--homepage-callouts__item__content">
+          <div class="of-section-page-intro__item__content">
         <p>Management framework for extending Kubernetes with Operators. Helps install, update, and manage the lifecycle of operators running across clusters. <a href="#" class="of-link of-link--inline">Learn more</a></p>
         <a href="#" class="of-button of-button--tertiary">
           Install OLM
@@ -37,9 +38,9 @@
         </a>
         </div>
       </div>
-      <div class="of-section--homepage-callouts__item of-section--homepage-callouts__item__discover">
+      <div class="of-section-page-intro__item of-section-page-intro__item__discover">
           <h3 class="of-heading of-heading--lg">Discover</h3>
-          <div class="of-section--homepage-callouts__item__content">
+          <div class="of-section-page-intro__item__content">
         <p>Home for the Kubernetes community to share Operators. Provides a catalog of existing operators and guidance for contributing new operators. <a href="#" class="of-link of-link--inline">Learn more</a></p>
         <a href="#" class="of-button of-button--tertiary">
           Contribute an Operator
@@ -93,6 +94,5 @@ height="18px" viewBox="0 0 26 18" style="enable-background:new 0 0 26 18;" xml:s
     
     <p class="of-section__contribute__content">The Operator Framework and its components are open source, so please feel encouraged to jump into each individually and learn what else you can do. If you want to discuss your experience, have questions, or want toget involved, join the <a href="" class="of-link of-link--inline">Operator Framework mailing list</a> and visit us on <a href="" class="of-link of-link--inline">GitHub</a>.</p>
   </section>
-</body>
-</html>
-{{ partial "footer.html" . }}
+
+{{ end }}

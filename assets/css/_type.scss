@@ -1,7 +1,9 @@
 //type
 .of-heading{
     color: var(--of--Color--black--100);
-    font-weight: var(--of--FontWeight--100);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .of-heading--xs, .of-heading--sm {
