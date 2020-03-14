@@ -5,5 +5,6 @@ draft: false
 menu: 
     main:
         name: Documentation
+        weight: 600
 ---
 
