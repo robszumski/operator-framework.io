@@ -1,6 +1,20 @@
 {{ define "masthead" }}
 <section class="of-masthead of-masthead--subpage">
-  yay
+  {{ if eq .URL "/about/" }}
+  <h1 class="of-heading of-heading--xl">about the operator framework</h1>
+  {{ end }}
+  {{ if eq .URL "/what/" }}
+  <h1 class="of-heading of-heading--xl">what is an operator</h1>
+  {{ end }}
+  {{ if eq .URL "/why/" }}
+  <h1 class="of-heading of-heading--xl">Why should I use the operator framework?</h1>
+  {{ end }}
+  {{ if eq .URL "/best-practices/" }}
+  <h1 class="of-heading of-heading--xl">What are some best practices?</h1>
+  {{ end }}
+  {{ if eq .URL "/faq/" }}
+  <h1 class="of-heading of-heading--xl">Frequently asked questions</h1>
+  {{ end }}
 </section>
 {{ end }}
 {{define "main"}}

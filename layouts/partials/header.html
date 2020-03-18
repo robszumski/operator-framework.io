@@ -1,16 +1,37 @@
 <header class="of-header-main">
     <a href="/" class="of-brand"><!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In  -->
-       <img src="/images/logo.svg" alt="">
+      <picture class="of-brand__picture">
+        <source srcset="/images/logo.svg" media="(min-width: 992px)">
+        <img src="/images/logo-sm.svg" alt="">
+      
+      </picture> 
         </a>
-    <nav class="of-nav-main">
+    <!-- <nav class="of-nav-main">
       <ul class="of-link-list of-link-list--primary">
         {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
     <li class="of-link-list__li"><a class="of-link-list__a{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} of-m-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
     {{ end }}
     </ul>
+    </nav> -->
+    <nav class="of-nav-main nav-collapse">
+      <ul class="of-nav-main__items menu-items">
+        <li class="of-nav-main__item"><a class="of-link-list__a" href="#">Home</a></li>
+        <li class="of-nav-main__item"><a class="of-link-list__a" href="/about/">About</a></li>
+        <li class="of-nav-main__item"><a class="of-link-list__a" href="/what/">What</a></li>
+        <li class="of-nav-main__item"><a class="of-link-list__a" href="/why/">Why</a></li>
+        <li class="of-nav-main__item"><a class="of-link-list__a" href="/best-practices/">Best Practices</a></li>
+        <li class="of-nav-main__item"><a class="of-link-list__a" href="/faq/">FAQ</a></li>
+        <li class="of-nav-main__item dropdown"><a  href="#" class="has-dropdown of-link-list__a">Documentation</a>
+          <ul class="of-nav-main__sub-items sub-menu">
+            <li class="of-nav-main__sub-item"><a class="of-nav-main__sub-item__link" href="#">Link</a></li>
+            <li class="of-nav-main__sub-item"><a class="of-nav-main__sub-item__link" href="#">Link</a></li>   
+          </ul>
+        </li>
+      </ul>
     </nav>
     <div class="of-header-main__search">
       <input class="of-header-main__search__input" type="search">
     </div>
+    <button id="nav-toggle" class="nav-toggle"></button>
   </header>
