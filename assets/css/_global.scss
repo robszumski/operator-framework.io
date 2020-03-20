@@ -298,9 +298,10 @@
             min-width: max-content;
             padding: var(--of--spacer--sm);
             display: flex;
-            overflow-y: hidden;
+            overflow: hidden;
             width: 100%;
             text-transform: capitalize;
+            letter-spacing: normal;
             @media (min-width: $ov--breakpoint--xl) { 
                 padding: 0 var(--of--spacer--2xl) 0 var(--of--spacer--2xl) ;
                 position: absolute;
