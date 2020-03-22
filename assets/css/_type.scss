@@ -1,11 +1,14 @@
 //type
-.of-heading{
+.of-heading {
     color: var(--of--Color--black--100);
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 2px;
 }
-
+.of-heading--secondary {
+    color: var(--of--color-brand--200);
+    margin-bottom: var(--of--spacer--md);
+}
 .of-heading--xs, .of-heading--sm {
     font-size: var(--of--FontSize--xs);
 }

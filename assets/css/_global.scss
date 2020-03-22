@@ -11,6 +11,11 @@
     }    
 }
 
+.of-list {
+    list-style-type: disc;
+    margin-left: var(--of--spacer--lg);
+}
+
 .of-section-separator {
     border-bottom: 2px solid var(--of--color-white--150);
 }
@@ -262,8 +267,7 @@
     }
 }
 
-.of-capability {
-    
+.of-capability-content {   
     width: 100%;
     padding: 0 var(--of--spacer--xl);
     
@@ -406,3 +410,94 @@
     }
     
 }
+
+.of-page--faq {
+    h3 {
+        color: var(--of--color-brand--200);
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+    & > * {
+        margin-bottom: var(--of--spacer--md);
+    }
+}
+
+.of-page--capabilities {
+    .of-capability-content {
+        margin: var(--of--spacer--md) 0;
+        padding-bottom: var(--of--spacer--xl);
+    }
+}
+  
+  .of-capability-level__table {
+    border: 1px solid var(--of--color-white--200);
+    border-collapse: collapse;
+    margin-top: var(--of--spacer--md);
+    width: 100%;
+    table-layout: fixed;
+
+       
+      @media (min-width: $ov--breakpoint--lg) {
+        tr {
+            border: 1px solid #ddd;
+            td:first-of-type {
+                border-right: 2px solid var(--of--color-white--200);
+            }
+            & > * {
+                padding: var(--of--spacer--md);
+            }
+          }
+          
+        th {
+            padding: var(--of--spacer--md) var(--of--spacer--lg);
+            background: var(--of--color-brand--200);
+            color: var(--of--color-white--100);
+            text-transform: uppercase;
+            &:first-of-type {
+                border-right: 2px solid var(--of--color-white--200);
+            }
+          }
+      }
+      @media (max-width: $ov--breakpoint--lg) {
+         
+          border: 0;
+      
+         thead {
+          border: none;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+        
+         tr {
+          display: block;
+          margin-bottom: .625em;
+        }
+        
+         td {
+          display: block;
+          margin-bottom: var(--of--spacer--md);
+          & > * {
+              padding: 0 var(--of--spacer--md);
+          }
+        }
+        
+         td::before {
+          content: attr(data-label);
+          font-weight: bold;
+          text-transform: uppercase;
+          display: block;
+          margin-bottom: var(--of--spacer--md);
+          background: var(--of--color-brand--200);
+          color: var(--of--color-white--100);
+          padding: var(--of--spacer--sm) var(--of--spacer--md);
+        }
+        
+      }
+  }
+  

@@ -77,14 +77,15 @@
     &__content {
         background: var(--of--color-white--100);
         margin: var(--of--spacer--lg);
+        padding-bottom: var(--of--spacer--lg);
         &:not(&--overlay){
             &__columns {
                 padding: var(--of--spacer--lg);
             }
         }
-        
+         
         @media (min-width: $ov--breakpoint--lg) {
-            margin: var(--of--spacer--lg) calc(var(--of--spacer--2xl) + var(--of--spacer--xl)) var(--of--spacer--2xl) calc(var(--of--spacer--2xl) + var(--of--spacer--xl));
+            margin: var(--of--spacer--xl) calc(var(--of--spacer--2xl) + var(--of--spacer--xl)) var(--of--spacer--2xl) calc(var(--of--spacer--2xl) + var(--of--spacer--xl));
             &--overlay {
                 border: 1px solid var(--of--color-white--200);
                 padding: var(--of--spacer--lg);
@@ -93,6 +94,8 @@
             &__columns {
                 column-count: 2;
             column-gap: calc(var(--of--spacer--3xl) * 2);
+            margin-bottom: calc(var(--of--spacer--md) * -1);
+            padding-bottom: var(--of--spacer--xl);
                 > * {
                     margin-bottom: var(--of--spacer--md);
                 }

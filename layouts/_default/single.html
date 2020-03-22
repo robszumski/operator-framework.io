@@ -15,8 +15,23 @@
   {{ if eq .URL "/faq/" }}
   <h1 class="of-heading of-heading--xl">Frequently asked questions</h1>
   {{ end }}
+  {{ if eq .URL "/operator-capabilities/" }}
+  <h1 class="of-heading of-heading--xl">Operator Capabilities</h1>
+  {{ end }}
 </section>
 {{ end }}
 {{define "main"}}
+{{ if eq .URL "/faq/" }}
+<section class="of-section-page-intro">
+  <header class="of-section-page-intro__header">
+    <h2 class="of-heading of-heading--md">Frequently asked questions</h1>
+  <p>If you are a community member, builder, consumer of applications, or a user of Kubernetes overall, the Operator Framework offers a number of benefits.</p>
+  </header>
+</section>
+<section class="of-section-page-intro__content of-page--faq">
+{{ end }}
 {{ .Content }}
+{{ if eq .URL "/faq/" }}
+</section>
+{{end}}
 {{end}}
