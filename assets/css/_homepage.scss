@@ -13,18 +13,19 @@
     }
     .of-heading {
         color: var(--of--color-white--100);
+        letter-spacing: normal;
     }
     &__title {
         display: flex;
         flex-direction: column;
-        line-height: 2rem;
-        margin-bottom: var(--of--spacer--md);
+        line-height: 3rem;
+        font-weight: normal;
         span {
             &:first-of-type {
-                font-size: 1.6875rem;
+                font-size: 2.625rem;
             }
             &:last-of-type {
-                font-size: 2.25rem;
+                font-size: 3.5625rem;
             }
         }
     }
@@ -93,7 +94,7 @@
             }
             &__columns {
                 column-count: 2;
-            column-gap: calc(var(--of--spacer--3xl) * 2);
+            column-gap: calc(var(--of--spacer--2xl) * 2);
             margin-bottom: calc(var(--of--spacer--md) * -1);
             padding-bottom: var(--of--spacer--xl);
                 > * {
