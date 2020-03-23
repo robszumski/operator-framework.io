@@ -324,7 +324,7 @@ ol {
             overflow: hidden;
             width: 100%;
             text-transform: capitalize;
-            letter-spacing: normal;
+            letter-spacing: -1px;
             @media (min-width: $ov--breakpoint--lg) { 
                 padding: 0 var(--of--spacer--2xl) 0 var(--of--spacer--2xl) ;
                 position: absolute;
