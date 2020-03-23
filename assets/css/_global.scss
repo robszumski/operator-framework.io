@@ -16,6 +16,22 @@
     margin-left: var(--of--spacer--lg);
 }
 
+ol {
+    margin-left: var(--of--spacer--md);
+    list-style: none;
+    counter-reset: ordered-list-counter;
+ li {
+  counter-increment: ordered-list-counter;
+  position: relative;
+  padding-left: var(--of--spacer--lg);
+}
+ li::before {
+  content: counter(ordered-list-counter) ". ";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+}
 .of-section-separator {
     border-bottom: 2px solid var(--of--color-white--150);
 }
@@ -250,15 +266,18 @@
 .of-masthead--subpage {
     background: var(--of--color-black--100) url("/images/bg-masthead.svg") no-repeat;
     background-size: 250px;
-        background-position: 115% 0;
-    @media (min-width: $ov--breakpoint--lg) {
-        background-size: 400px auto;
-        background-position: right -85px;
-    }
+    background-position: 115% 0;
     min-height:135px;
     display: flex; 
     align-items: center;
-    padding: 0 var(--of--spacer--3xl);
+    padding: 0 var(--of--spacer--lg);
+    @media (min-width: $ov--breakpoint--lg) {
+        background-size: 400px auto;
+        background-position: right -85px;
+        padding: 0 calc(var(--of--spacer--2xl) + var(--of--spacer--xl));
+    }
+    
+    
 }
 
 .of-masthead {
@@ -267,11 +286,11 @@
     }
 }
 
-.of-capability-content {   
+.of-capability-content, .of-capability-level__item {   
     width: 100%;
     padding: 0 var(--of--spacer--xl);
     
-    @media (min-width: $ov--breakpoint--xl) { 
+    @media (min-width: $ov--breakpoint--lg) { 
         padding: 0 calc(var(--of--spacer--2xl) + var(--of--spacer--xl)) var(--of--spacer--2xl) calc(var(--of--spacer--2xl) + var(--of--spacer--xl));
     }
     & > .of-heading {
@@ -292,7 +311,7 @@
         li {
             position: relative;
             margin-bottom: var(--of--spacer--md); 
-            @media (min-width: $ov--breakpoint--xl) {
+            @media (min-width: $ov--breakpoint--lg) {
                 padding-top: calc(var(--of--spacer--3xl) + var(--of--spacer--sm));
             }
         }
@@ -306,7 +325,7 @@
             width: 100%;
             text-transform: capitalize;
             letter-spacing: normal;
-            @media (min-width: $ov--breakpoint--xl) { 
+            @media (min-width: $ov--breakpoint--lg) { 
                 padding: 0 var(--of--spacer--2xl) 0 var(--of--spacer--2xl) ;
                 position: absolute;
                 top: 0;
@@ -340,7 +359,7 @@
             }
             }
         }
-        @media (min-width: $ov--breakpoint--xl) {
+        @media (min-width: $ov--breakpoint--lg) {
         li:not(:first-child) {
             h4, p {
                 margin-left: calc(var(--of--spacer--lg) * -1);
@@ -357,7 +376,7 @@
         }
         }
         li:first-child {
-            @media (min-width: $ov--breakpoint--xl) {
+            @media (min-width: $ov--breakpoint--lg) {
             p {
                 padding-right: var(--of--spacer--2xl);
             }
@@ -417,6 +436,11 @@
         text-transform: uppercase;
         font-weight: 800;
         letter-spacing: 2px;
+        &:not(:first-of-type) {
+            margin-top: var(--of--spacer--xl);
+            padding-top: var(--of--spacer--xl);
+            border-top: 2px solid var(--of--color-white--200);
+        }
     }
     & > * {
         margin-bottom: var(--of--spacer--md);
@@ -424,23 +448,47 @@
 }
 
 .of-page--capabilities {
-    .of-capability-content {
-        margin: var(--of--spacer--md) 0;
-        padding-bottom: var(--of--spacer--xl);
+    .of-capability-content, .of-capability-level__item {
+        margin: var(--of--spacer--2xl) 0 var(--of--spacer--sm) ;
+        padding-bottom: var(--of--spacer--2xl);
     }
 }
   
   .of-capability-level__table {
     border: 1px solid var(--of--color-white--200);
     border-collapse: collapse;
-    margin-top: var(--of--spacer--md);
+    margin: var(--of--spacer--md) 0 var(--of--spacer--xl);
     width: 100%;
     table-layout: fixed;
-
+    &__level-1 {
+        th, td::before {
+            background: #6cb1b6;
+        }
+    }
+    &__level-2 {
+        th, td::before {
+            background: #318c96;
+        }
+    }
+    &__level-3 {
+        th, td::before {
+            background: #0e6875;
+        }
+    }
+    &__level-4 {
+        th, td::before {
+            background: #0a4b53;
+        }
+    }
+    &__level-5 {
+        th, td::before {
+            background: #052f35;
+        }
+    }
        
       @media (min-width: $ov--breakpoint--lg) {
         tr {
-            border: 1px solid #ddd;
+            border: 1px solid var(--of--color-white--200);
             td:first-of-type {
                 border-right: 2px solid var(--of--color-white--200);
             }
@@ -451,7 +499,6 @@
           
         th {
             padding: var(--of--spacer--md) var(--of--spacer--lg);
-            background: var(--of--color-brand--200);
             color: var(--of--color-white--100);
             text-transform: uppercase;
             &:first-of-type {
@@ -484,6 +531,7 @@
           margin-bottom: var(--of--spacer--md);
           & > * {
               padding: 0 var(--of--spacer--md);
+              vertical-align: top;
           }
         }
         
@@ -499,5 +547,39 @@
         }
         
       }
+      a[aria-describedby="footnote-label"] {
+        counter-increment: footnotes; /* 1 */
+        text-decoration: none; /* 2 */
+        color: inherit; /* 2 */
+        cursor: default; /* 2 */
+        outline: none; /* 2 */
+      }
+      
+    
+      a[aria-describedby="footnote-label"]::after {
+        content: '[' counter(footnotes) ']'; /* 1 */
+        vertical-align: super; /* 2 */
+        font-size: 0.5em; /* 3 */
+        margin-left: 2px; /* 4 */
+        color: var(--of--color-brand--100); /* 5 */
+        text-decoration: underline; /* 5 */
+        cursor: pointer; /* 5 */
+      }
+      
+    
+      a[aria-describedby="footnote-label"]:focus::after {
+        outline: thin dotted;
+        outline-offset: 2px;
+      }
   }
+  
+
+
+ .of-capability-level__table__footnotes {
+    counter-reset: footnotes;
+  }
+  
+.of-table-footnotes {
+    margin-bottom: var(--of--spacer--lg);
+}
   

@@ -16,4 +16,6 @@ This declarative model is basically the way a user interacts with Kubernetes. Op
 
 The Operator itself is a piece of software running in a Pod on the cluster, interacting with the Kubernetes API server. That’s how it gets notified about the presence or modification of FooBarApp objects. That’s also when it will start running its loop to ensure that the application service is actually available and configured in the way the user expressed in the specification of FooBarApp objects. This is called a reconciliation loop (example code). The application service may in turn be implemented with more basic objects like Pods, Secrets or PersistentVolumes, but carefully arranged and initialized, specific to the needs of this application. Furthermore, the Operator could possibly introduce an object of typeFooBarAppBackup and create backups of the app as a result.
     
+### Another FAQ
 
+answer for another FAQ

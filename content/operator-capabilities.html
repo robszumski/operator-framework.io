@@ -7,11 +7,10 @@ draft: false
 <section class="of-section-page-intro of-page--capabilities">
     <header class="of-section-page-intro__header">
       <h1 class="of-heading of-heading--md">Operator capability levels</h1>
-    <p>text here</p>
+    <p>Operators come in different maturity levels in regards to their lifecycle management capabilities for the application or workload they deliver. The capability models aims to provide guidance in terminology to express what features users can expect from an operator.</p>
     </header>
 
 <div class="of-capability-content of-section-separator">
-    <h2 class="of-heading of-heading--md">Capability model</h2>
     <ul class="of-capability-content__model">
         <li>
             <h3 class="of-heading of-heading--lg"><span>level &#8544;</span></h3>
@@ -195,17 +194,65 @@ c-3.9,0-7.8,0-11.7,0c-0.5,0-0.6-0.2-0.6-0.6C142.4,45.8,142.4,42.7,142.4,39.6z"/>
 <p>text here</p>
 <h3 class="of-heading of-heading-md">Terminology</h3>
 <ul>
-    <li><strong>Operator</strong> the custom controller installed on a Kubernetes cluster.</li>
-    <li><strong>Operator</strong> the custom controller installed on a Kubernetes cluster.</li>
-    <li><strong>Operator</strong> the custom controller installed on a Kubernetes cluster.</li>
-    <li><strong>Operator</strong> the custom controller installed on a Kubernetes cluster.</li>
-    <li><strong>Operator</strong> the custom controller installed on a Kubernetes cluster.</li>
+    <li><strong>Operator</strong> - the custom controller installed on a Kubernetes cluster</li>
+    <li><strong>Operand</strong> - the managed workload provided by the Operator as a service</li>
+    <li><strong>Custom Resource (CR)</strong> - an instance of the CustomResourceDefinition the Operator ships that represents the Operand or an Operation on an Operand (also known as primary resources)</li>
+    <li><strong>Managed resources</strong> - the Kubernetes objects or off-cluster services the Operator uses to constitute an Operand (also known as secondary resources)</li>
+    <li><strong>Custom Resource Definition (CRD)</strong> - an API of the Operator, providing the blueprint and validation rules for Custom Resources</li>
 </ul>
 </div>   
-<div class="of-capability-level of-capability-content">
-    <h3 class="of-heading of-heading--xl">Level 1: basic install</h3>
-    <p>The operator offers the following basic features:</p>
-    <table class="of-capability-level__table">
+    <div class="of-capability-level__item of-section-separator">
+        <h3 class="of-heading of-heading--xl">Level &#8544;: basic install</h3>
+        <p>The operator offers the following basic features:</p>
+        <table class="of-capability-level__table of-capability-level__table__level-1">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Feature">
+                    <h4 class="of-heading of-heading--sm">Installation of the workload</h4>
+                    <ul class="of-list">
+                        <li>Operator deploys an Operand or configures off-cluster resources</li>
+                        <li>Operator waits for managed resources to reach a healthy state</li>
+                        <li>Operator conveys readiness of application or managed resources to the user leveraging the status block of the Custom Resource</li>
+                    </ul>
+                </td>
+                <td data-label="Example"><p>An Operator deploys a database by creating Deployment, ServiceAccount, RoleBinding, ConfigMap, PersistentVolumeClaim and Secret object, initializes an empty database schema and signals readiness of the database to accept queries.</p></td>
+              </tr>
+              <tr>
+                <td scope="row" data-label="Feature">
+                    <h4 class="of-heading of-heading--sm">Configuration of the workload</h4>
+                    <ul class="of-list">
+                        <li>Operator provides configuration via the spec section of the Custom Resource</li>
+                        <li>Operator reconciles configuration and updates to it with the status of the managed resources</li>
+                    </ul>
+                </td>
+                <td data-label="Example">
+                    <p>An Operator, managing a database, offers increasing the capacity of the database by resizing the underlying PersistentVolumeClaim based on changes the databases Custom Resource instance.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="of-heading of-heading--md of-heading--secondary">GUIDING QUESTIONS TO DETERMINE OPERATOR REACHING LEVEL I</h3>
+          <ol class="of-ordered-list">
+              <li>What installation configuration can be set in the CR?</li>
+              <li>What additional installation configuration could still be added?</li>
+              <li>Can you set operand configuration in the CR? If so, what configuration is supported for each operand?</li>
+              <li>Does the managed application / workload get updated in a non-disruptive fashion when the configuration of the CR is changed?</li>
+              <li>Does the status of the CR reflect that configuration changes are currently applied?</li>
+              <li>What additional operand configuration could still be added?</li>
+              <li>Do all of the instantiated CRs include a status block? If so, does it provide enough insight to the user about the application state?</li>
+              <li>Do all of your CRs have documentation listing valid values and mandatory fields?</li>	
+          </ol>
+    </div>
+    <div class="of-capability-level__item of-section-separator">
+        <h3 class="of-heading of-heading--xl">Level &#8545;: Seamless Upgrades</h3>
+    <p>The Operator offers the following features related to upgrades:</p>
+    <table class="of-capability-level__table of-capability-level__table__level-2">
         <thead>
           <tr>
             <th scope="col">Feature</th>
@@ -217,29 +264,174 @@ c-3.9,0-7.8,0-11.7,0c-0.5,0-0.6-0.2-0.6-0.6C142.4,45.8,142.4,42.7,142.4,39.6z"/>
             <td data-label="Feature">
                 <h4 class="of-heading of-heading--sm">Upgrade of the managed workload</h4>
                 <ul class="of-list">
-                    <li>item 1</li>
-                    <li>item 2</li>
-                    <li>item 3</li>
+                    <li>Operand can be upgraded in the process of upgrading the Operator, or</li>
+                    <li>Operand can be upgraded as part of changing the CR</li>
+                    <li>Operator understands how to upgrade older versions of the Operand, managed previously by an older version of the Operator</li>
                 </ul>
             </td>
-            <td data-label="Example"><p>empty</p></td>
+            <td data-label="Example"><p>An Operator deploys a database by creating Deployment, ServiceAccount, RoleBinding, ConfigMap, PersistentVolumeClaim and Secret object, initializes an empty database schema and signals readiness of the database to accept queries.</p></td>
           </tr>
           <tr>
             <td scope="row" data-label="Feature">
-                <h4 class="of-heading of-heading--sm">Upgrade of the operator</h4>
+                <h4 class="of-heading of-heading--sm">Upgrade of the Operator</h4>
                 <ul class="of-list">
-                    <li>item 1</li>
-                    <li>item 2</li>
-                    <li>item 3</li>
+                    <li>Operator can be upgraded seamlessly and can either still manage older versions of the Operand or update them</li>
+                    <li>Operator conveys inability to manage an unsupported version of the Operand in the status section of the CR</li>
                 </ul>
             </td>
             <td data-label="Example">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque eius fugit blanditiis fugiat ipsum sint tenetur repellendus eum! Magnam ea tenetur optio atque nemo consequatur voluptates reprehenderit praesentium hic illum.</p>
+                <p>An Operator managing a database can update an existing database from a previous to a newer version without data loss. The Operator might do so as part of a configuration change or as part of an update of the Operator itself.</p>
             </td>
           </tr>
         </tbody>
       </table>
-</div>
+      <h3 class="of-heading of-heading--md of-heading--secondary">GUIDING QUESTIONS TO DETERMINE OPERATOR REACHING LEVEL &#8545;</h3>
+      <ol class="of-ordered-list">
+          <li>Can your Operator upgrade your Operand?</li>
+          <li>Does your Operator upgrade your Operand during updates of the Operator?</li>
+          <li>Can your Operator manage older Operand version versions?</li>
+          <li>Is the Operand upgrade potentially disruptive?</li>
+          <li>If there is downtime during an upgrade, does the Operator convey this in the status of the CR?</li>	
+      </ol>
+    </div>
+    <div class="of-capability-level__item of-section-separator">
+        <h3 class="of-heading of-heading--xl">Level &#8546;: Full lifecycle</h3>
+    <p>The Operator offers one or more of the following lifecycle management features:</p>
+    <table class="of-capability-level__table of-capability-level__table__level-3">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Feature">
+                <p><strong>Operator provides the ability to create backups of the Operand</strong></p>
+                <p><strong>Operator is able to restore a backup of an Operand</strong></p>
+                <p><strong>Operator orchestrates complex re-configuration flows on the Operand</strong></p>
+                <p><strong>Operator implements fail-over and fail-back of clustered Operands</strong></p>
+                <p><strong>Operator supports add/removing members to a clustered Operand</strong></p>
+                <p><strong>Operator enables application-aware scaling of the Operand</strong></p>
+            </td>
+            <td data-label="Example"><p>An Operator managing a database provides the ability to create an application consistent backup of the data by flushing the database log and quiescing the write activity to the database files.</p></td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <h3 class="of-heading of-heading--md of-heading--secondary">GUIDING QUESTIONS TO DETERMINE OPERATOR REACHING LEVEL &#8546;</h3>
+      <ol class="of-ordered-list">
+        <li>Does your Operator support backing up the Operand?</li>
+        <li>Does your Operator support restoring an Operand from a backup and get it under management again?</li>
+        <li>Does your Operator wait for reconfiguration work to be finished and in the expected sequence?</li>
+        <li>Is your Operator taking cluster quorum into account, if present?</li>
+        <li>Does your Operator allow adding/removing read-only slave instances of your Operator?</li>
+      </ol>
+    </div>  
+    <div class="of-capability-level__item of-section-separator">
+        <h3 class="of-heading of-heading--xl">Level &#8547;: Deep insights</h3>
+    <table class="of-capability-level__table of-capability-level__table__level-4">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Feature">
+                
+                <h4 class="of-heading of-heading--sm">Monitoring</h4>
+                <ul class="of-list">
+                <li>Operator exposing metrics about its health</li>
+                <li>Operator exposes health and performance metrics about the Operand</li>
+                </ul>
+                <h4 class="of-heading of-heading--sm">Alerting and Events</h4>
+                <ul class="of-list of-capability-level__table__footnotes">
+                <li><a aria-describedby="footnote-label" href="#alerts">Operand sends useful alerts</a></li>
+                <li><a aria-describedby="footnote-label" href="#events">Custom Resources emit custom events</a></li>
+                </ul>
+                <h4 class="of-heading of-heading--sm">Metering</h4>
+                <ul class="of-list">
+                <li>Operator leverages Operator Metering</li>
+                </ul>
+            </td>
+            <td data-label="Example"><p>A database Operator continues to parse the logging output of the database software and understands noteworthy log events, e.g. running out of space for database files and produces alerts. The operator also instruments the database and exposes application level, e.g. database queries per second.</p></td>
+          </tr>
+        </tbody>
+      </table>
+      <footer class="of-table-footnotes">
+          <ol>
+            <li id="alerts">Aim to have as few alerts as possible, by alerting on symptoms that are associated with end-user pain rather than trying to catch every possible way that pain could be caused. Alerts should link to relevant consoles and make it easy to figure out which component is at fault</li>
+            <li id="events">Native k8s objects emit events (“Events” objects) as their states change. Your operator should do similar for state changes related to your operand. “Custom”, here, means that it should emit events specific to your operator/operand outside of the events already emitted by their deployment methodology. This, in conjunction with status descriptors, give much needed visibility into actions taken by your operator/operand. Operators are codified domain-specific knowledge. Your end user should not need this domain-specific knowledge to gain visibility into what’s happening with their resource.</li>
+          </ol>
+      </footer>
+      
+
+      <h3 class="of-heading of-heading--md of-heading--secondary">GUIDING QUESTIONS TO DETERMINE OPERATOR REACHING LEVEL &#8547;</h3>
+      <ol class="of-ordered-list">
+        <li>Does your Operator expose a health metrics endpoint?</li>
+        <li>Does your Operator expose Operand alerts?</li>
+        <li>Does your Operator watch the Operand to create alerts?</li>
+        <li>Does your Operator emit custom Kubernetes events?</li>
+        <li>Does your Operator expose Operand performance metrics?</li>	
+      </ol>
+    </div> 
+    <div class="of-capability-level__item">
+        <h3 class="of-heading of-heading--xl">Level &#8548;: Auto Pilot</h3>
+    <table class="of-capability-level__table of-capability-level__table__level-5">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Feature">
+                
+                <h4 class="of-heading of-heading--sm">Auto Scaling</h4>
+                <ul class="of-list">
+                <li>Operator scales the Operand up under increased load based on Operand metric</li>
+                <li>Operator scales the Operand down below a certain load based on Operand metric</li>
+                </ul>
+                <h4 class="of-heading of-heading--sm">Auto-healing</h4>
+                <ul class="of-list of-capability-level__table__footnotes">
+                <li>Operator can automatically heal unhealthy Operands based on Operand metrics/alerts/logs</li>
+                <li>Operator can prevent the Operand from transitioning into an unhealthy state based on Operand metrics</li>
+                </ul>
+                <h4 class="of-heading of-heading--sm">Auto-tuning</h4>
+                <ul class="of-list">
+                    <li>Operator is able to automatically tune the Operand to a certain workload pattern</li>
+                    <li>Operator dynamically shifts workloads onto best suited nodes</li>
+                </ul>
+                <h4 class="of-heading of-heading--sm">Abnormality detection</h4>
+                <ul class="of-list">
+                    <li>Operator determines deviations from a standard performance profile</li>
+                </ul>
+            </td>
+            <td data-label="Example"><p>A database operator monitors the query load of the database and automatically scales additional read-only slave replicas up and down. The operator also detects subpar index performance and automatically rebuilds the index in times of reduced load. Further, the operator understands the normal performance profile of the database and creates alerts on excessive amount of slow queries. In the event of slow queries and high disk latency the Operator automatically transitions the database files to another PersistentVolume of a higher performance class.</p></td>
+          </tr>
+        </tbody>
+      </table>
+      <footer class="of-table-footnotes">
+          <ol>
+            <li id="alerts">Aim to have as few alerts as possible, by alerting on symptoms that are associated with end-user pain rather than trying to catch every possible way that pain could be caused. Alerts should link to relevant consoles and make it easy to figure out which component is at fault</li>
+            <li id="events">Native k8s objects emit events (“Events” objects) as their states change. Your operator should do similar for state changes related to your operand. “Custom”, here, means that it should emit events specific to your operator/operand outside of the events already emitted by their deployment methodology. This, in conjunction with status descriptors, give much needed visibility into actions taken by your operator/operand. Operators are codified domain-specific knowledge. Your end user should not need this domain-specific knowledge to gain visibility into what’s happening with their resource.</li>
+          </ol>
+      </footer>
+      
+
+      <h3 class="of-heading of-heading--md of-heading--secondary">GUIDING QUESTIONS TO DETERMINE OPERATOR REACHING LEVEL &#8548;</h3>
+      <ol class="of-ordered-list">
+        <li>Can your operator read metrics such as requests per second or other relevant metrics and auto-scale horizontally or vertically, i.e., increasing the number of pods or resources used by pods?</li>
+        <li>Based on question number 1 can it scale down or decrease the number of pods or the total amount of resources used by pods?</li>
+        <li>Based on the deep insights built upon level 4 capabilities can your operator determine when an operand became unhealthy and take action such as redeploying, changing configurations, restoring backups etc.?</li>
+        <li>Again considering that with level 4 deep insights the operator has information to learn the performance baseline dynamically and can learn the best configurations for peak performance can it adjust the configurations to do so?</li>
+        <li>Can it move the workloads to better nodes, storage or networks to do so?</li>
+        <li>Can it detect and alert when anything is working below the learned performance baseline that can’t be corrected automatically?</li>
+      </ol>
+    </div>
 </section>
 
 
