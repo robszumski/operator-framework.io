@@ -56,7 +56,6 @@
         
         &__li {
             @media (min-width: $ov--breakpoint--lg) {
-                // margin-right: var(--of--spacer--md);
                 border: none;
             }
             border: 1px solid var(--of--color-black--200);
@@ -72,8 +71,7 @@
                 
         }
         &__a {
-            width: 100%;
-            
+            width: 100%;            
             display: inline-block;
             position: relative;
             padding: var(--of--spacer--xs) var(--of--spacer--md);
@@ -83,7 +81,7 @@
             @media (min-width: $ov--breakpoint--lg) {
                 width: auto;
                 padding: var(--of--spacer--lg) .9vw;
-                &:active, &:focus, &:hover {
+                &.of-m-active, &:focus, &:hover {
                   text-decoration: none;
                   background: var(--of--color-brand--100);
               }

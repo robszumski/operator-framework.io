@@ -6,30 +6,22 @@
       
       </picture> 
         </a>
-    <!-- <nav class="of-nav-main">
-      <ul class="of-link-list of-link-list--primary">
-        {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-    <li class="of-link-list__li"><a class="of-link-list__a{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} of-m-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
-    {{ end }}
-    </ul>
-    </nav> -->
     <nav class="of-nav-main nav-collapse">
       <ul class="of-nav-main__items menu-items">
-        <li class="of-nav-main__item"><a class="of-link-list__a" href="#">Home</a></li>
-        <li class="of-nav-main__item"><a class="of-link-list__a" href="/about/">About</a></li>
-        <li class="of-nav-main__item"><a class="of-link-list__a" href="/what/">What</a></li>
-        <li class="of-nav-main__item"><a class="of-link-list__a" href="/why/">Why</a></li>
-        <li class="of-nav-main__item"><a class="of-link-list__a" href="/best-practices/">Best Practices</a></li>
-        <li class="of-nav-main__item"><a class="of-link-list__a" href="/faq/">FAQ</a></li>
-        <li class="of-nav-main__item dropdown"><a  href="#" class="has-dropdown of-link-list__a">Documentation</a>
-          <ul class="of-nav-main__sub-items sub-menu">
-            <li class="of-nav-main__sub-item"><a class="of-nav-main__sub-item__link" href="#">SDK Documentation</a></li>
-            <li class="of-nav-main__sub-item"><a class="of-nav-main__sub-item__link" href="#">OLM Documentation</a></li>   
-          </ul>
-        </li>
+        <li class="of-nav-main__item"><a class="of-link-list__a {{ if eq .URL "/" }} of-m-active {{end}}" href="/">Home</a></li>
+        {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <li class="of-nav-main__item"><a class="of-link-list__a{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} of-m-active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a></li>
+    {{ end }}
+    <li class="of-nav-main__item dropdown"><a  href="#" class="has-dropdown of-link-list__a {{ if eq .URL "/documentation/" }} of-m-active {{end}}">Documentation</a>
+      <ul class="of-nav-main__sub-items sub-menu">
+        <li class="of-nav-main__sub-item"><a class="of-nav-main__sub-item__link" href="#">SDK Documentation</a></li>
+        <li class="of-nav-main__sub-item"><a class="of-nav-main__sub-item__link" href="#">OLM Documentation</a></li>   
       </ul>
+    </li>
+    </ul>
     </nav>
+   
     <div class="of-header-main__search">
       <input class="of-header-main__search__input" type="search">
     </div>
