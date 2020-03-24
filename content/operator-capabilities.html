@@ -7,7 +7,7 @@ draft: false
 <section class="of-section-page-intro of-page--capabilities">
     <header class="of-section-page-intro__header">
       <h1 class="of-heading of-heading--md">Operator capability levels</h1>
-    <p>Operators come in different maturity levels in regards to their lifecycle management capabilities for the application or workload they deliver. The capability models aims to provide guidance in terminology to express what features users can expect from an operator.</p>
+    <p>Operators come in different maturity levels in regards to their lifecycle management capabilities for the application or workload they deliver. The capability models aims to provide guidance in terminology to express what features users can expect from an Operator.</p>
     </header>
 
 <div class="of-capability-content of-section-separator">
@@ -203,7 +203,7 @@ c-3.9,0-7.8,0-11.7,0c-0.5,0-0.6-0.2-0.6-0.6C142.4,45.8,142.4,42.7,142.4,39.6z"/>
 </div>   
     <div class="of-capability-level__item of-section-separator">
         <h3 class="of-heading of-heading--xl">Level &#8544;: basic install</h3>
-        <p>The operator offers the following basic features:</p>
+        <p>The Operator offers the following basic features:</p>
         <table class="of-capability-level__table of-capability-level__table__level-1">
             <thead>
               <tr>
@@ -363,7 +363,7 @@ c-3.9,0-7.8,0-11.7,0c-0.5,0-0.6-0.2-0.6-0.6C142.4,45.8,142.4,42.7,142.4,39.6z"/>
       <footer class="of-table-footnotes">
           <ol>
             <li id="alerts">Aim to have as few alerts as possible, by alerting on symptoms that are associated with end-user pain rather than trying to catch every possible way that pain could be caused. Alerts should link to relevant consoles and make it easy to figure out which component is at fault</li>
-            <li id="events">Native k8s objects emit events (“Events” objects) as their states change. Your operator should do similar for state changes related to your operand. “Custom”, here, means that it should emit events specific to your operator/operand outside of the events already emitted by their deployment methodology. This, in conjunction with status descriptors, give much needed visibility into actions taken by your operator/operand. Operators are codified domain-specific knowledge. Your end user should not need this domain-specific knowledge to gain visibility into what’s happening with their resource.</li>
+            <li id="events">Native k8s objects emit events (“Events” objects) as their states change. Your operator should do similar for state changes related to your operand. “Custom”, here, means that it should emit events specific to your Operator/Operand outside of the events already emitted by their deployment methodology. This, in conjunction with status descriptors, give much needed visibility into actions taken by your Operator/Operand. Operators are codified domain-specific knowledge. Your end user should not need this domain-specific knowledge to gain visibility into what’s happening with their resource.</li>
           </ol>
       </footer>
       
@@ -410,24 +410,24 @@ c-3.9,0-7.8,0-11.7,0c-0.5,0-0.6-0.2-0.6-0.6C142.4,45.8,142.4,42.7,142.4,39.6z"/>
                     <li>Operator determines deviations from a standard performance profile</li>
                 </ul>
             </td>
-            <td data-label="Example"><p>A database operator monitors the query load of the database and automatically scales additional read-only slave replicas up and down. The operator also detects subpar index performance and automatically rebuilds the index in times of reduced load. Further, the operator understands the normal performance profile of the database and creates alerts on excessive amount of slow queries. In the event of slow queries and high disk latency the Operator automatically transitions the database files to another PersistentVolume of a higher performance class.</p></td>
+            <td data-label="Example"><p>A database Operator monitors the query load of the database and automatically scales additional read-only slave replicas up and down. The Operator also detects subpar index performance and automatically rebuilds the index in times of reduced load. Further, the Operator understands the normal performance profile of the database and creates alerts on excessive amount of slow queries. In the event of slow queries and high disk latency the Operator automatically transitions the database files to another PersistentVolume of a higher performance class.</p></td>
           </tr>
         </tbody>
       </table>
       <footer class="of-table-footnotes">
           <ol>
             <li id="alerts">Aim to have as few alerts as possible, by alerting on symptoms that are associated with end-user pain rather than trying to catch every possible way that pain could be caused. Alerts should link to relevant consoles and make it easy to figure out which component is at fault</li>
-            <li id="events">Native k8s objects emit events (“Events” objects) as their states change. Your operator should do similar for state changes related to your operand. “Custom”, here, means that it should emit events specific to your operator/operand outside of the events already emitted by their deployment methodology. This, in conjunction with status descriptors, give much needed visibility into actions taken by your operator/operand. Operators are codified domain-specific knowledge. Your end user should not need this domain-specific knowledge to gain visibility into what’s happening with their resource.</li>
+            <li id="events">Native k8s objects emit events (“Events” objects) as their states change. Your Operator should do similar for state changes related to your operand. “Custom”, here, means that it should emit events specific to your Operator/Operand outside of the events already emitted by their deployment methodology. This, in conjunction with status descriptors, give much needed visibility into actions taken by your Operator/Operand. Operators are codified domain-specific knowledge. Your end user should not need this domain-specific knowledge to gain visibility into what’s happening with their resource.</li>
           </ol>
       </footer>
       
 
       <h3 class="of-heading of-heading--md of-heading--secondary">GUIDING QUESTIONS TO DETERMINE OPERATOR REACHING LEVEL &#8548;</h3>
       <ol class="of-ordered-list">
-        <li>Can your operator read metrics such as requests per second or other relevant metrics and auto-scale horizontally or vertically, i.e., increasing the number of pods or resources used by pods?</li>
+        <li>Can your Operator read metrics such as requests per second or other relevant metrics and auto-scale horizontally or vertically, i.e., increasing the number of pods or resources used by pods?</li>
         <li>Based on question number 1 can it scale down or decrease the number of pods or the total amount of resources used by pods?</li>
-        <li>Based on the deep insights built upon level 4 capabilities can your operator determine when an operand became unhealthy and take action such as redeploying, changing configurations, restoring backups etc.?</li>
-        <li>Again considering that with level 4 deep insights the operator has information to learn the performance baseline dynamically and can learn the best configurations for peak performance can it adjust the configurations to do so?</li>
+        <li>Based on the deep insights built upon level 4 capabilities can your Operator determine when an operand became unhealthy and take action such as redeploying, changing configurations, restoring backups etc.?</li>
+        <li>Again considering that with level 4 deep insights the Operator has information to learn the performance baseline dynamically and can learn the best configurations for peak performance can it adjust the configurations to do so?</li>
         <li>Can it move the workloads to better nodes, storage or networks to do so?</li>
         <li>Can it detect and alert when anything is working below the learned performance baseline that can’t be corrected automatically?</li>
       </ol>
