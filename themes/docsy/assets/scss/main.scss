@@ -1,0 +1,22 @@
+@import "functions";
+@import "variables";
+@import "reset";
+@import "type";
+
+//components
+@import "header";
+@import "footer";
+
+//layout
+@import "homepage";
+
+//global
+@import "global";
+
+@import "../vendor/Font-Awesome/scss/fontawesome.scss";
+@import "../vendor/Font-Awesome/scss/solid.scss";
+@import "../vendor/Font-Awesome/scss/brands.scss";
+
+
+
+// @import "styles_project";
