@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "Operator SDK"
+title = "Operator Framework"
 
 enableRobotsTXT = true
 
@@ -54,8 +54,8 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title ="Operator SDK"
-description = "Operator SDK"
+title ="Operator Framework"
+description = "Operator Framework"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
